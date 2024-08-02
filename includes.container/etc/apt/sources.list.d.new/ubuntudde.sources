@@ -1,0 +1,6 @@
+Types: deb
+URIs: https://ppa.launchpadcontent.net/ubuntudde-dev/stable/ubuntu/
+Suites: focal
+Architectures: amd64
+Components: main
+
