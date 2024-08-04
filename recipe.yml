@@ -23,7 +23,7 @@ stages:
     - apt upgrade -y
     - apt clean
     - apt-mark hold snapd gnome-software-plugin-snap
-    - apt -y install squashfs-tools minisign
+    - apt -y install squashfs-tools minisign curl
 
   modules:
   - name: mandb
