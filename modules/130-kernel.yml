@@ -2,5 +2,7 @@ name: kernel
 type: apt
 source:
   packages:
-  - linux-image-amd64
-  - linux-headers-amd64
+  - linux-image-surface
+  - linux-headers-surface
+  - libwacom-surface
+  - iptsd
