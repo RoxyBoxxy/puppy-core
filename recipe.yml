@@ -3,7 +3,7 @@ id: puppycore
 
 stages:
 - id: build
-  base: ghcr.io/vanilla-os/pico:main
+  base: ghcr.io/roxyboxxy/pico:main
   singlelayer: false
   labels:
     maintainer: Vanilla OS Contributors
@@ -18,15 +18,8 @@ stages:
     type: shell
     commands:
     - apt update
-    - apt install -y man-db curl
+    - apt install -y man-db
     - mandb -c
-
-  - name: linux-surface-repo
-    type: shell
-    commands:
-    - curl -fSsL https://raw.githubusercontent.com/linux-surface/linux-surface/master/pkg/keys/surface.asc | gpg --dearmor -o /usr/share/keyrings/linux-surface.gpg
-    - echo 'deb [signed-by=/usr/share/keyrings/linux-surface.gpg] https://pkg.surfacelinux.com/debian release main' > /etc/apt/sources.list.d/linux-surface.list
-    - apt-get update
 
   - name: packages-modules
     type: includes
